@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth/ngx';
+import { ModalController } from '@ionic/angular';
+import { LoginPage } from '../login/login.page';
+
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,26 @@ import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth/n
 })
 export class HomePage {
 
-  constructor(private fingerprintAuth: AndroidFingerprintAuth) { }
+  constructor(private modalCtrl: ModalController) {
+    setTimeout(() =>{
+      this.lockApp();
+    },2000);
+  }
+  async lockApp(){
+    const modal = await this.modalCtrl.create({
+      component: LoginPage,
+      backdropDismiss: false,
+      cssClass: 'login-modal',
+      componentProps: {
+        isModal: true
+      }
+  });
+  modal.present();
 
+  }
 }
 
+/*
 this.fingerprintAuth.isAvailable()
   .then((result)=> {
     if(result.isAvailable){
@@ -37,3 +55,4 @@ this.fingerprintAuth.isAvailable()
     }
   })
   .catch(error => console.error(error));
+*/
