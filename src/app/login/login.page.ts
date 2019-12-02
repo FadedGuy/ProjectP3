@@ -17,6 +17,12 @@ export class LoginPage implements OnInit {
     console.log('Hola Modal: ', this.isModal)
   }
 
+login(){
+  alert('hola :)');
+  this.router.navigateByUrl('/home');
+}
+
+/*
 login() {
   this.router.navigateByUrl('/home');
   /*
@@ -34,4 +40,6 @@ login() {
     console.log('err: ', error);*/
   //});
 }
+*/
+
 }
