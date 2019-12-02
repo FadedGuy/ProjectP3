@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -18,13 +19,17 @@ export class HomePage {
     const modal = await this.modalCtrl.create({
       component: LoginPage,
       backdropDismiss: false,
-      cssClass: 'login-modal'
+      cssClass: 'login-modal',
+      componentProps: {
+        isModal: true
+      }
   });
   modal.present();
 
   }
 }
 
+/*
 this.fingerprintAuth.isAvailable()
   .then((result)=> {
     if(result.isAvailable){
@@ -50,3 +55,4 @@ this.fingerprintAuth.isAvailable()
     }
   })
   .catch(error => console.error(error));
+*/
