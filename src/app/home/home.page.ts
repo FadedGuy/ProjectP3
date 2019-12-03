@@ -13,7 +13,7 @@ export class HomePage {
   constructor(private modalCtrl: ModalController) {
     setTimeout(() =>{
       this.lockApp();
-    },2000);
+    },6000);
   }
   async lockApp(){
     const modal = await this.modalCtrl.create({
