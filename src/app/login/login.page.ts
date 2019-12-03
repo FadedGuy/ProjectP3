@@ -17,27 +17,21 @@ export class LoginPage implements OnInit {
     console.log('Hola Modal: ', this.isModal)
   }
 
-/*login(){
-  alert('hola :)');
-  this.router.navigateByUrl('/home');
-}*/
-
-
 login(){
-  this.router.navigateByUrl('/home');
+  //this.router.navigateByUrl('/home');
   
-  /*this.faio.show({
+  this.faio.show({
 
   }).then(() => {
     alert("hola");
     if (this.isModal) {
       this.modalCtrl.dismiss();
-    } else {
+    } else{
       this.router.navigateByUrl('/home');
     }
   })
   .catch((error: any) => {
     console.log('err: ', error);
-  });*/
+  });
   }
 }
