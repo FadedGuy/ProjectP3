@@ -17,7 +17,9 @@
   <ul>
     <ion-card *ngFor="let listH of lista"> 
       <ion-card-title>{{listH.nom}} {{listH.apel}}</ion-card-title>
-      <p> Numero de telefono: {{listH.tel}} </p>
+      <p>
+        <ion-label (click)="callNumber(listH.tel)">Numero de telefono: {{listH.tel}}</ion-label>
+      </p>
       <p>Fecha de nacimiento (yy/mm/dd): {{listH.fec}}</p>
       <ion-button (click)="edit(listH.id)" color="success">Editar</ion-button>
       <ion-button (click)="elim(listH.id)" color="danger">Eliminar</ion-button>
