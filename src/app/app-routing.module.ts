@@ -15,12 +15,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },  {
+  },
+  {
     path: 'directorio',
     loadChildren: () => import('./directorio/directorio.module').then( m => m.DirectorioPageModule)
   },
-
-
 ];
 
 @NgModule({

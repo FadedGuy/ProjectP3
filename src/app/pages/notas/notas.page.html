@@ -1,9 +1,25 @@
 <ion-header>
   <ion-toolbar>
+    <ion-button (click)="return()">Back</ion-button>
     <ion-title>notas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div>
+    <ion-input [(ngModel)]="tituloN" placeholder="Titulo de la nota"></ion-input>
+    <ion-input [(ngModel)]="contentN" placeholder="Descripcion"></ion-input>
+  </div>
 
+  <ion-button (click)="addNote()">Agregar</ion-button>
+
+  <ion-list *ngFor="let use of lista">
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h2>{{use.title}}</h2>
+        <h4>{{use.content}}</h4>
+      </ion-label>
+      <ion-button (click)="eraseNote(use.id)">Erase</ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>

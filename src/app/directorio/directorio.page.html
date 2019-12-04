@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>directorio</ion-title>
+      <ion-button (click)="return()">Back</ion-button>
+    <ion-title> Directorio </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div>
+    <ion-input [(ngModel)]="nombreN" placeholder="Nombre"></ion-input>
+    <ion-input [(ngModel)]="apellidoN" placeholder="Apellido"></ion-input>
+    <ion-input [(ngModel)]="numeroN" placeholder="Número de telefono"></ion-input>
+    <ion-datetime done-text="Listo" cancel-text="Cancelar" placeholder="Fecha de nacimiento" [(ngModel)]="fechaN"></ion-datetime>
+  </div>
 
+  <ion-button (click)="anadir()">Guardar</ion-button>
+  <ul>
+    <ion-card *ngFor="let listH of lista"> 
+      <ion-card-title>{{listH.nom}} {{listH.apel}}</ion-card-title>
+      <p> Numero de telefono: {{listH.tel}} </p>
+      <p>Fecha de nacimiento (yy/mm/dd): {{listH.fec}}</p>
+      <ion-button (click)="edit(listH.id)" color="success">Editar</ion-button>
+      <ion-button (click)="elim(listH.id)" color="danger">Eliminar</ion-button>
+    </ion-card>
+  </ul>
 </ion-content>
