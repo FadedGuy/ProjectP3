@@ -23,7 +23,6 @@ login(){
   this.faio.show({
 
   }).then(() => {
-    alert("hola");
     if (this.isModal) {
       this.modalCtrl.dismiss();
     } else{

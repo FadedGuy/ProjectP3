@@ -1,14 +1,17 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      La carpeta para el delicioso  
+      Main Page 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    La carpeta secreta prros
-    <p>Soy el lobo nocturno de la noche. Entren a mi directo chavales</p>
+  <div class="ion-padding"> La carpeta secreta </div>
+  <div>
+    <ion-button (click)="gotoDir()">Directorio</ion-button>
+    <ion-button (click)="gotoGale()">Galeria</ion-button>
+    <ion-button (click)="gotoNotes()">Notas</ion-button>
+    <ion-button (click)="lockPhone()">Bloquear</ion-button>
   </div>
 </ion-content>
