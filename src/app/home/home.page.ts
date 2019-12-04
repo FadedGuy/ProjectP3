@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,22 +10,35 @@ import { LoginPage } from '../login/login.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor(private modalCtrl: ModalController) {
-    setTimeout(() =>{
-      this.lockApp();
-    },6000);
+// this.lockApp();
+/*async lockApp(){
+  const modal = await this.modalCtrl.create({
+    component: LoginPage,
+    backdropDismiss: false,
+    cssClass: 'login-modal',
+    componentProps: {
+      isModal: true
+    }
+});
+modal.present();
+}*/
+  constructor(private modalCtrl: ModalController, private router: Router) {
   }
-  async lockApp(){
-    const modal = await this.modalCtrl.create({
-      component: LoginPage,
-      backdropDismiss: false,
-      cssClass: 'login-modal',
-      componentProps: {
-        isModal: true
-      }
-  });
-  modal.present();
+  
+  gotoDir(){
+    this.router.navigateByUrl('/directorio');
+  }
+  
+  gotoGale(){
+    this.router.navigateByUrl('/galeria');
+  }
+
+  gotoNotes(){
+    this.router.navigateByUrl('/notas');
+  }
+
+  lockPhone(){
+    this.router.navigateByUrl('/login');
+  }
 
   }
-}
