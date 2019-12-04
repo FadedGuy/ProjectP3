@@ -5,10 +5,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
-    path: 'directorio',
-    loadChildren: () => import('./pages/directorio/directorio.module').then( m => m.DirectorioPageModule)
-  },
-  {
     path: 'galeria',
     loadChildren: () => import('./pages/galeria/galeria.module').then( m => m.GaleriaPageModule)
   },
@@ -19,7 +15,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },  {
+    path: 'directorio',
+    loadChildren: () => import('./directorio/directorio.module').then( m => m.DirectorioPageModule)
   },
+
 
 ];
 
