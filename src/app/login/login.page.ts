@@ -18,9 +18,9 @@ export class LoginPage implements OnInit {
   }
 
 login(){
-  //this.router.navigateByUrl('/home');
+  this.router.navigateByUrl('/home');
   
-  this.faio.show({
+  /*this.faio.show({
 
   }).then(() => {
     if (this.isModal) {
@@ -31,6 +31,6 @@ login(){
   })
   .catch((error: any) => {
     console.log('err: ', error);
-  });
+  });*/
   }
 }

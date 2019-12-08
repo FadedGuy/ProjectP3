@@ -6,13 +6,13 @@ import { Router } from '@angular/router';
   templateUrl: './galeria.page.html',
   styleUrls: ['./galeria.page.scss'],
 })
-export class GaleriaPage implements OnInit {
+export class GaleriaPage implements OnInit{
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
+  constructor(private router: Router) {
   }
 
+  ngOnInit(){}
+  
   return(){
     this.router.navigateByUrl("/home");
   }
