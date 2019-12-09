@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 @Component({
   selector: 'app-directorio',
@@ -15,7 +16,7 @@ export class DirectorioPage{
   numeroN: string = "";
   fechaN: string = "";
 
-  constructor(private storage: Storage, private router: Router) {
+  constructor(private storage: Storage, private router: Router, private callN: CallNumber) {
     this.storage.get('list').then(listaA => {
       if(listaA != null)
         this.lista = listaA;
@@ -111,5 +112,12 @@ export class DirectorioPage{
 
   return(){
     this.router.navigateByUrl('/home');
+  }
+
+  callNumber(marco){
+    this.callN.callNumber(marco, true)
+      .then(res => alert("Marcando"))
+      .catch(err => alert("No se puede joven"))
+    this.router.navigateByUrl('/login');
   }
 }
