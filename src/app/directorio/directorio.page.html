@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-button (click)="return()">Back</ion-button>
+  <ion-toolbar mode="ios">
+      <ion-button color="naranga" (click)="return()">Back</ion-button>
     <ion-title> Directorio </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,7 +13,7 @@
     <ion-datetime done-text="Listo" cancel-text="Cancelar" placeholder="Fecha de nacimiento" [(ngModel)]="fechaN"></ion-datetime>
   </div>
 
-  <ion-button (click)="anadir()">Guardar</ion-button>
+  <ion-button color="naranga" (click)="anadir()">Guardar</ion-button>
   <ul>
     <ion-card *ngFor="let listH of lista"> 
       <ion-card-title>{{listH.nom}} {{listH.apel}}</ion-card-title>

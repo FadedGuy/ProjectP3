@@ -10,6 +10,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   @Input()isModal: boolean;
+  imageManuel: string = "https://i.ibb.co/LRGsxqt/lockIcon.png";
 
   constructor(private faio: FingerprintAIO, private router: Router, private modalCtrl: ModalController) { }
 

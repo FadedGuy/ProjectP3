@@ -29,3 +29,21 @@
     --width: 70%;
     --height: 35%;
 }
+
+ion-toolbar {
+    --background: #DB9700;
+  }
+
+ion-title{
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+ion-content{
+    --ion-background-color: #424242;
+}

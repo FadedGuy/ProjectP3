@@ -1,20 +1,20 @@
 <ion-header *ngIf="!isModal">
-  <ion-toolbar color="primary">
-    <ion-title>Login</ion-title>
+  <ion-toolbar mode="ios">
+    <ion-title class="title" >Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="fondo">
 <ion-content>
   <ion-row class="login-row" align="center">
     <ion-col size="5"></ion-col>
     <ion-col class="lock-col">
       <div class="lock-bg"></div>
-      <ion-button class="lock-img" (click)="login()" align="center" img>login</ion-button>
+      <img [src]= "imageManuel" class="lock-img" tappable (click)="login()">
     </ion-col>
     <ion-col size="5"></ion-col>
+    
   </ion-row>
-  <img src="../imagenes/lockIcon.svg">
 </ion-content>
 
 
