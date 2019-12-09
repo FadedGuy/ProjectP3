@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 import { LoginPageModule } from './login/login.module';
 import { CallNumber } from '@ionic-native/call-number/ngx';
-
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +23,7 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
     StatusBar,
     SplashScreen,
     CallNumber,
+    Camera,
     { provide: RouteReuseStrategy, useClass: 
       IonicRouteStrategy }, 
       FingerprintAIO
