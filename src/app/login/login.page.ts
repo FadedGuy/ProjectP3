@@ -32,5 +32,5 @@ login(){
   .catch((error: any) => {
     console.log('err: ', error);
   });
-}
+  }
 }

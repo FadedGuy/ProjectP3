@@ -1,17 +1,69 @@
 <ion-header>
   <ion-toolbar mode="ios">
     <ion-title>
-      Main Page 
+      ¡Bienvenido!
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding"> La carpeta secreta </div>
+    <div class="lock-bg"></div>
+    
   <div>
-    <ion-button color="naranga" (click)="gotoDir()">Directorio</ion-button>
-    <ion-button color="naranga" (click)="gotoGale()">Galeria</ion-button>
-    <ion-button color="naranga" (click)="gotoNotes()">Notas</ion-button>
-    <ion-button color="naranga" (click)="lockPhone()">Bloquear</ion-button>
+    <ion-grid>
+      <ion-row></ion-row>
+      <ion-row></ion-row>
+      <ion-row></ion-row>
+      <ion-row></ion-row>
+      <ion-row></ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col>
+            <div class="center">
+                <ion-button shape="round" expand="block" size="default"  color="naranga" (click)="gotoDir()">Contactos
+                    <ion-icon ios="ios-images" name="contact"></ion-icon> 
+                </ion-button>
+            </div>
+        </ion-col>
+        <ion-col></ion-col>     
+      </ion-row>
+      <ion-row>
+          <ion-col></ion-col>
+          <ion-col>
+              <div class="center">
+            <ion-button shape="round" size="default" expand="block" color="naranga" (click)="gotoGale()">Galeria
+                <ion-icon md="md-images" name="images"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+        <ion-col></ion-col>     
+      </ion-row>
+      <ion-row>
+          <ion-col></ion-col>
+          <ion-col>
+              <div class="center">
+            <ion-button shape="round" size="default" expand="block" color="naranga" (click)="gotoNotes()">Notas
+                <ion-icon ios="ios-paper" name="copy"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+        <ion-col></ion-col>     
+      </ion-row>
+      <ion-row>
+          <ion-col></ion-col>
+          <ion-col>
+              <div classs="center">
+            <ion-button shape="round" size="default" expand="block" color="naranga" (click)="lockPhone()">Bloquear
+                <ion-icon ios="ios-images" name="lock"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+        <ion-col></ion-col>     
+      </ion-row>
+    </ion-grid>
+    
+    
+    
+   
   </div>
 </ion-content>
