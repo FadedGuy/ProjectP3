@@ -28,26 +28,26 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-      this.platform.pause.subscribe(() => {
+      /*this.platform..subscribe(() => {
         if (this.router.url != '/login') {
           this.lockApp();
         }
-      });
+      });*/
     });
   }
 
-  async lockApp(){
+  /*async lockApp(){
     const modal = await this.modalCtrl.create({
       component: LoginPage,
       backdropDismiss: false,
       cssClass: 'login-modal',
       componentProps: {
         isModal: true
-      }
-  });
-  modal.present();
+        }
+    });
+    modal.present();
 
-  }
+  }*/
 
 
 

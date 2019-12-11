@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import {Camera, CameraOptions} from '@ionic-native/camera/ngx';
 import {Storage} from '@ionic/storage';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class PhotoService {
   imagenActual: any;
   public fotos: Foto[]=[];
-  constructor(private camera: Camera, private storage:Storage) { }
+  constructor(private camera: Camera, private storage3:Storage, private router: Router) { }
   tomarFoto() {
     const options: CameraOptions = {
       quality: 100,
@@ -23,19 +24,21 @@ export class PhotoService {
       });
     
       //Guardar
-      this.storage.set('photos', this.fotos);
+      this.storage3.set('photos', this.fotos);
+      alert("Se ha guardado al foto");
     }, (err) => {
       // Error que me pedía que logueara
-      console.log("Error: " + err);
+      console.log("Error de camara: " + err);
+      alert("Oh no! Ha ocurrido un error" + err);
     });
-
-    
   }
-  guardarFoto()
+  cargarFoto()
     {
-      this.storage.get('photos').then((photos) => {
+      this.storage3.get('photos').then((photos) => {
         this.fotos = photos || [];
       });
+      //alert(this.fotos.length);
+      //return this.fotos;
     }
 }
 class Foto
