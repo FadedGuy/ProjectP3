@@ -18,8 +18,8 @@ export class LoginPage implements OnInit {
   }
 
 login(){
-  this.router.navigateByUrl('/home');
-  /*
+  //this.router.navigateByUrl('/home');
+  
   this.faio.show({
     title: "Ingrese su dato biometrico"
   }).then(() => {
@@ -31,6 +31,6 @@ login(){
   })
   .catch((error: any) => {
     console.log('err: ', error);
-  });*/
+  });
   }
 }

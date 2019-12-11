@@ -8,8 +8,8 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="6" *ngFor="let fotish of photoService.fotos">
-        <ion-item (click)="fotoPresionar()">
+      <ion-col size="6" *ngFor="let fotish of photoService.fotos; let i = index">
+        <ion-item (click)="fotoPresionar(i)">
           <ion-img [src]="fotish.data"></ion-img>
         </ion-item>
       </ion-col>

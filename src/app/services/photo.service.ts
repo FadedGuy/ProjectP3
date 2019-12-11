@@ -40,6 +40,17 @@ export class PhotoService {
       //alert(this.fotos.length);
       //return this.fotos;
     }
+
+    updateData(indicee){
+      let auxFoto: Foto[] = [];
+      for(let i = 0; i < this.fotos.length; i++){
+        if(i != indicee){
+          auxFoto.push(this.fotos[i]);
+        }
+      }
+      this.fotos = auxFoto;
+      this.storage3.set('photos', this.fotos);
+    }
 }
 class Foto
 {
