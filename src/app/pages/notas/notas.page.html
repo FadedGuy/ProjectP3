@@ -6,12 +6,33 @@
 </ion-header>
 
 <ion-content>
-  <div>
-    <ion-input [(ngModel)]="tituloN" placeholder="Titulo de la nota"></ion-input>
-    <ion-input [(ngModel)]="contentN" placeholder="Descripcion"></ion-input>
-  </div>
 
-  <ion-button color="naranga" (click)="addNote()">Agregar</ion-button>
+
+<ion-list>
+
+    <ion-item-group>
+      <ion-item-divider mode="ios" >Nueva nota</ion-item-divider>
+        <ion-item>
+        <ion-input [(ngModel)]="tituloN" placeholder="Titulo de la nota"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="contentN" placeholder="Descripcion"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+          <ion-button color="naranga" (click)="addNote()">Agregar</ion-button>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          </ion-grid>
+      </ion-item>
+    </ion-item-group>
+</ion-list>
+
+
 
   
   <ul>
