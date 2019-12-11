@@ -27,4 +27,8 @@ export class GaleriaPage implements OnInit{
   return(){
     this.router.navigateByUrl("/home");
   }
+
+  fotoPresionar(){
+    alert("Me has tocado!");
+  }
 }
