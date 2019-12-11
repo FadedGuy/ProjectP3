@@ -85,6 +85,22 @@
 
     /**fondo**/
     --ion-background-color:#424242;
+
+    /**tarjeta directorio**/
+    --ion-color-tarjeta: rgb(220, 170, 63);
+    --ion-color-tarjeta-rgb: 219, 151, 0;
+    --ion-color-tarjeta-contrast: #ffffff;
+    --ion-color-tarjeta-contrast-rgb: 0, 0, 0;
+    --ion-color-tarjeta-shade: #d7d8da;
+    --ion-color-tarjeta-tint: #f5f6f9;
+
+  /**fondo ion card**/
+  --ion-color-fondo: #555555;
+    --ion-color-fondo-rgb: 219, 151, 0;
+    --ion-color-fondo-contrast: #ffffff;
+    --ion-color-fondo-contrast-rgb: 0, 0, 0;
+    --ion-color-fondo-shade: #d7d8da;
+    --ion-color-fondo-tint: #f5f6f9;
 }
 
 .ion-color-naranga {
@@ -94,4 +110,21 @@
   --ion-color-contrast-rgb: var(--ion-color-naranga-contrast-rgb);
   --ion-color-shade: var(--ion-color-naranga-shade);
   --ion-color-tint: var(--ion-color-naranga-tint);
+}
+.ion-color-tarjeta {
+  --ion-color-base: var(--ion-color-tarjeta);
+  --ion-color-base-rgb: var(--ion-color-tarjeta-rgb);
+  --ion-color-contrast: var(--ion-color-tarjeta-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-tarjeta-contrast-rgb);
+  --ion-color-shade: var(--ion-color-tarjeta-shade);
+  --ion-color-tint: var(--ion-color-tarjeta-tint);
+}
+
+.ion-color-fondo {
+  --ion-color-base: var(--ion-color-fondo);
+  --ion-color-base-rgb: var(--ion-color-fondo-rgb);
+  --ion-color-contrast: var(--ion-color-fondo-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-fondo-contrast-rgb);
+  --ion-color-shade: var(--ion-color-fondo-shade);
+  --ion-color-tint: var(--ion-color-fondo-tint);
 }
