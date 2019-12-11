@@ -19,8 +19,8 @@ export class LoginPage implements OnInit {
   }
 
 login(){
-  this.router.navigateByUrl('/home');
-  /*
+  //this.router.navigateByUrl('/home');
+  
   this.faio.show({
 
   }).then(() => {
@@ -32,6 +32,6 @@ login(){
   })
   .catch((error: any) => {
     console.log('err: ', error);
-  });*/
+  });
   }
 }
