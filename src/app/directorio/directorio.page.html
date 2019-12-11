@@ -15,18 +15,18 @@
 
   <ion-button color="naranga" (click)="anadir()">Guardar</ion-button>
   <ul>
-    <ion-card *ngFor="let listH of lista" color="fondo"> 
+    <ion-card *ngFor="let listH of lista"> 
       <ion-item color="tarjeta">
       <ion-icon name="person" slot="start"></ion-icon>
       <ion-card-title>{{listH.nom}} {{listH.apel}}</ion-card-title>
       </ion-item>
-      <ion-item>
+      <ion-item color="fondo">
       <ion-icon name="call" slot="start"></ion-icon>
       <p>
         <ion-label (click)="callNumber(listH.tel)">Numero de telefono: {{listH.tel}}</ion-label>
       </p>
     </ion-item>
-    <ion-item>
+    <ion-item color="fondo">
       <ion-icon name="calendar" slot="start"></ion-icon>
       <p color="primary">Fecha de nacimiento (yy/mm/dd): {{listH.fec}}</p>
     </ion-item>
