@@ -12,7 +12,11 @@
     <ion-input [(ngModel)]="numeroN" placeholder="Número de telefono" type="number"></ion-input>
     <ion-datetime done-text="Listo" cancel-text="Cancelar" placeholder="Fecha de nacimiento" [(ngModel)]="fechaN"></ion-datetime>
   </div>
-
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" >
+      <ion-fab-button (click)="photoService.tomarFoto()" color="naranga">
+        <ion-icon name="person-add"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
   <ion-button color="naranga" (click)="anadir()">Guardar</ion-button>
   <ul>
     <ion-card *ngFor="let listH of lista"> 
