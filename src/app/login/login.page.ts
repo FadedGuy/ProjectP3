@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -15,14 +15,13 @@ export class LoginPage implements OnInit {
   constructor(private faio: FingerprintAIO, private router: Router, private modalCtrl: ModalController) { }
 
   ngOnInit() {
-    console.log('Hola Modal: ', this.isModal)
   }
 
 login(){
   this.router.navigateByUrl('/home');
   /*
   this.faio.show({
-
+    title: "Ingrese su dato biometrico"
   }).then(() => {
     if (this.isModal) {
       this.modalCtrl.dismiss();

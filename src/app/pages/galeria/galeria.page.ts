@@ -9,16 +9,26 @@ import {PhotoService} from '../../services/photo.service';
 })
 export class GaleriaPage implements OnInit{
   
-  constructor(private router: Router, public photoService: PhotoService) {
-  }
+  fotish: any[] = [];
 
-  
+  constructor(private router: Router, public photoService: PhotoService) { 
+    this.photoService.cargarFoto();
+  }
 
   ngOnInit(){
-    this.photoService.guardarFoto();
+    //this.fotish = this.photoService.cargarFoto();
+    this.photoService.cargarFoto();
   }
   
+  holas(){
+    alert(this.fotish.length);
+  }
+
   return(){
     this.router.navigateByUrl("/home");
+  }
+
+  fotoPresionar(){
+    alert("Me has tocado!");
   }
 }

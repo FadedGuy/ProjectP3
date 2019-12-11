@@ -117,7 +117,6 @@ export class DirectorioPage{
   callNumber(marco){
     this.callN.callNumber(marco, true)
       .then(res => alert("Marcando"))
-      .catch(err => alert("No se puede joven"))
-    this.router.navigateByUrl('/login');
+      .catch(err => alert("No se ha podido marcar"))
   }
 }
