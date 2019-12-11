@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'directorio',
     loadChildren: () => import('./directorio/directorio.module').then( m => m.DirectorioPageModule)
   },
+  {
+    path: 'add-directorio',
+    loadChildren: () => import('./pages/add-directorio/add-directorio.module').then( m => m.AddDirectorioPageModule)
+  },
 ];
 
 @NgModule({
